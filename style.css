@@ -4,7 +4,7 @@
   font-family: "MuseoModerno", cursive;
 }
 body {
-  background: url(/background/giphy.gif);
+  background: url(./background/giphy.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
