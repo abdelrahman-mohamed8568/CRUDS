@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" /></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/9735caad08.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+    <div id="blur">
+    <div class="curd">
+      <div class="head">
+        <h1>Administration</h1>
+        <p>Product list system</p>
+      </div>
+      <div class="inputs">
+        <input placeholder="Title" type="text" id="title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="Taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="Discount"
+          />
+          <small onkeyup="getTotal()" id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button onclick="createNewData()" id="create">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input type="search" id="search" placeholder="Search" onkeyup="srearchAll(this.value)"/>
+        </div>
+      </div>
+      <div id="deleteAll"></div>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Taxes</th>
+          <th>Discount</th>
+          <th>Total</th>
+          <th>Category</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+
+        <tbody id="tbody"></tbody>
+      </table>
+      <a href="" class="up"></a>
+      <i id="up"  class="fa-solid fa-angles-up fa-fade"></i>
+    </div>
+  </div>
+    <div class="container">
+      <div class="popup" id="popup">
+      <i id="icon" class="fa-solid fa-exclamation fa-flip"></i>
+      <h2 id="popupH2"></h2>
+      <button   class="btnDelete">Yes (Delete)</button>
+      <button   class="btnCancel">Cancel</button>
+    </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
